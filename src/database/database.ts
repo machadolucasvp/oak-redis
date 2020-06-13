@@ -1,7 +1,8 @@
 import { Client } from "https://deno.land/x/postgres/mod.ts";
-import config from '../config.ts';
+import { DatabaseConfig } from '../config.ts';
 
-const client: Client = new Client(config);
+
+const client: Client = new Client(DatabaseConfig);
 
 try{
     await client.connect();
