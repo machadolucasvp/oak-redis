@@ -1,9 +1,12 @@
 import { Application } from 'https://deno.land/x/oak/mod.ts'
 import router from './routes.ts'
 import config from './config.ts';
+import ReponseHandler from './middlewares/ResponseHandler.ts'
 
 const app = new Application()
 
+
+app.use(ReponseHandler)
 app.use(router.routes())  
 app.use(router.allowedMethods())
 

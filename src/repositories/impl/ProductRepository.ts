@@ -26,7 +26,8 @@ class ProductRepository implements Repository<number, Product> {
   async post(product: Product): Promise<Product>{
     const result = await Database.query({
       text:
-        "insert into products (id, name, price, barcode, description) values ($1, $2, $3, $4, $5) returning id, title, isbn;",
+        "insert into products (id, name, price, barcode, description)"
+        + " values ($1, $2, $3, $4, $5) returning id, title, isbn;",
       args: [
         product.id,
         product.name,
