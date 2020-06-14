@@ -1,4 +1,4 @@
-import { Response } from "https://deno.land/x/oak/mod.ts";
+import { Response } from "../deps.ts";
 
 export type ResponseBuilder = (
   builder: { status: number; body?: Object },

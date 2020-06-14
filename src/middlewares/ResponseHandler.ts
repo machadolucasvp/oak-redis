@@ -1,4 +1,4 @@
-import { Context, Response } from "https://deno.land/x/oak/mod.ts";
+import { Context } from "../deps.ts";
 
 export default async (ctx: Context, next: any) => {
   try {

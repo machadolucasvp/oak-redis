@@ -1,4 +1,4 @@
-import { Client } from "https://deno.land/x/postgres/mod.ts";
+import { Client } from "../deps.ts";
 import { DatabaseConfig } from "../config.ts";
 
 const client: Client = new Client(DatabaseConfig);
