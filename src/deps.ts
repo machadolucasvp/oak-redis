@@ -1,16 +1,16 @@
 import {
   Application,
   Response,
-  Context
+  Context,
 } from "https://deno.land/x/oak/mod.ts";
 
 import {
-  Client
+  Client,
 } from "https://deno.land/x/postgres/mod.ts";
 
 export {
   Application,
   Response,
   Context,
-  Client
-}
+  Client,
+};

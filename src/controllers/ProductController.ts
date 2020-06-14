@@ -1,11 +1,8 @@
 import ProductRepository from "../repositories/impl/ProductRepository.ts";
-import { Context } from "../deps.ts";
-import { ResponseBuilder } from "../types/Response.ts";
+import { Context } from "../types/Response.ts";
 
 class ProductController {
-  async getAll(
-    ctx: Context & { response: { build: ResponseBuilder } },
-  ): Promise<void> {
+  async getAll(ctx: Context): Promise<void> {
     const products = await ProductRepository.getAll();
 
     ctx.response.build({
