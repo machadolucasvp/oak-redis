@@ -1,6 +1,6 @@
-import ProductRepository from '../repositories/impl/ProductRepository.ts'
+import ProductRepository from "../repositories/impl/ProductRepository.ts";
 import { Context } from "https://deno.land/x/oak/mod.ts";
-import { ResponseBuilder } from '../types/Response.ts';
+import { ResponseBuilder } from "../types/Response.ts";
 
 class ProductController {
 
@@ -10,8 +10,8 @@ class ProductController {
 
     ctx.response.build({
       status: 200,
-      body: products
-    })
+      body: products,
+    });
     return;
   }
 }

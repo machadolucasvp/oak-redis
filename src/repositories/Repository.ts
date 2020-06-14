@@ -1,4 +1,4 @@
-export default interface Repository<K,T> {
+export default interface Repository<K, T> {
   getAll(): Promise<T[]>;
   get(identifier: K): Promise<T>;
   post(object: T): Promise<T>;
