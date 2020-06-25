@@ -1,4 +1,4 @@
-import ProductRepository from "../repositories/impl/ProductRepository.ts";
+import ProductRepository from "../repositories/impl/product.repository.ts";
 import { Context } from "../types/Response.ts";
 
 class ProductController {

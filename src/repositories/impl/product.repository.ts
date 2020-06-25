@@ -1,5 +1,5 @@
-import Repository from "../Repository.ts";
-import Product from "../../models/Product.ts";
+import Repository from "../repository.ts";
+import Product from "../../models/product.ts";
 import Database from "../../database/database.ts";
 
 class ProductRepository implements Repository<number, Product> {

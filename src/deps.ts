@@ -2,6 +2,7 @@ import {
   Application,
   Response,
   Context,
+  Router,
 } from "https://deno.land/x/oak/mod.ts";
 
 import {
@@ -13,4 +14,5 @@ export {
   Response,
   Context,
   Client,
+  Router,
 };
