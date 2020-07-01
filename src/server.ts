@@ -1,7 +1,7 @@
 import { Application } from "https://deno.land/x/oak/mod.ts";
 import router from "./routes.ts";
 import config from "./config.ts";
-import ReponseHandler from "./middlewares/ResponseHandler.ts";
+import ReponseHandler from "./middlewares/response.ts";
 
 const app = new Application();
 

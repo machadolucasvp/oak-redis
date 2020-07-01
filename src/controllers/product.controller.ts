@@ -1,5 +1,5 @@
 import ProductRepository from "../repositories/impl/product.repository.ts";
-import { Context } from "../types/Response.ts";
+import { Context } from "../types/response.ts";
 
 class ProductController {
   async getAll(ctx: Context): Promise<void> {
