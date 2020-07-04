@@ -28,15 +28,15 @@ const databaseConfig: DatabaseConfig = {
 
 const redisConfig: RedisConfig = {
   hostname: ENV.CACHE_HOSTNAME,
-  port: parseInt(ENV.CACHE_PORT)
-}
+  port: parseInt(ENV.CACHE_PORT),
+};
 
 const appConfig: App = {
   port: parseInt(ENV.PORT) || 8000,
 };
 
-export { 
+export {
   databaseConfig as DatabaseConfig,
-  redisConfig as RedisConfig
- };
+  redisConfig as RedisConfig,
+};
 export default appConfig;

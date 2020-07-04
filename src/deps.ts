@@ -3,6 +3,7 @@ import {
   Response,
   Context,
   Router,
+  helpers,
 } from "https://deno.land/x/oak/mod.ts";
 
 import {
@@ -19,5 +20,6 @@ export {
   Context,
   Client,
   Router,
+  helpers as Helpers,
   connect as Connect,
 };

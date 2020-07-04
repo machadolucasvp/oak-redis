@@ -6,3 +6,5 @@ export type Context = OakContext & { response: { build: ResponseBuilder } };
 export type ResponseBuilder = (
   builder: { status: number; body?: Object },
 ) => Response;
+
+export { Response };
