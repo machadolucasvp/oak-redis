@@ -24,7 +24,7 @@ class ProductRepository implements Repository<number, Product> {
   async post(product: Product): Promise<Product> {
     const result = await Database.query({
       text: "insert into products (id, name, price, barcode, description)" +
-        " values ($1, $2, $3, $4, $5) returning id, title, isbn;",
+        " values ($1, $2, $3, $4, $5) returning name, price, barcode;",
       args: [
         product.id,
         product.name,
@@ -38,6 +38,7 @@ class ProductRepository implements Repository<number, Product> {
   }
 
   async put(product: Product): Promise<Product> {
+    console.log(product)
     const result = await Database.query({
       text: "update products set name=$2, price=$3, description=$4 where id=$1",
       args: [

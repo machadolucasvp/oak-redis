@@ -35,9 +35,14 @@ class ProductController {
   }
 
   async put(ctx: Context) {
-    const product = (await ctx.request.body()).value as Product;
+    const { id } = Helpers.getQuery(ctx, { mergeParams: true });
 
-    const result = await ProductRepository.put(product);
+    const [updatedProduct, oldProduct] = await Promise.all([
+      ctx.request.body(),
+      ProductRepository.get(parseInt(id))
+    ]);
+
+    const result = await ProductRepository.put({ ...oldProduct, ...updatedProduct.value });
 
     ctx.response.build({
       status: 201,
